@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: darksalmon;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 500px;
+    display: flex;
+}
+ .container .Box{
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background: #ccc;
+    transition: 0.5s;
+}
+
+.container .Box:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.container .Box .img-box{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.container .Box:nth-child(odd) .img-box {
+    bottom: 0;
+    left: 0;
+} 
+.container .Box .img-box img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.container .Box .details{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.container .Box:nth-child(even) .details{
+    bottom: 0;
+    left: 0;
+}
+.container .Box:nth-child(1) .details{
+  background-color: coral;
+}
+.container .Box:nth-child(2) .details{
+    background-color: crimson;
+}
+.container .Box:nth-child(3) .details{
+    background-color: goldenrod;
+}
+.container .Box:nth-child(4) .details{
+    background-color: darkgreen; 
+}
+
+.container .Box .details .box-contenu{
+    position: absolute;
+    top: calc(1% + 16%);
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.container .Box:hover .details .box-contenu{
+    top: calc(12%);
+}
+
+.container .Box .details .box-contenu h3{
+    margin: 0;
+    padding: 0;
+    padding: 10px 5px;
+    color:#fff;
+}
+.container .Box .details .box-contenu a{
+    display: inline-block;
+    padding: 5px 35px;
+    text-decoration: none;
+    color:#fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+.container .Box .details .box-contenu a:hover{
+    background-color: #262626;
+ }
+ 
+.container .Box:hover .details .box-contenu a{
+    transform: scale(1);
+}
+
+.container .Box .details i{
+    font-size: 80px;
+}
