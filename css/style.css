@@ -25,6 +25,7 @@ body{
 .container .Box:hover{
     transform: scale(1.1);
     z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0,0, 1.5);
 }
 
 .container .Box .img-box{
@@ -114,3 +115,47 @@ body{
 .container .Box .details i{
     font-size: 80px;
 }
+
+@media (max-width:1000px){
+    
+    .container{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .container .Box{
+        height: 250px;
+    }
+    .container .box .img-box{
+        display: none;
+    }
+}
+
+
+@media (max-width:768px){
+    
+    .container {
+       display: initial;
+    }
+    .container  .Box{
+        width: 50%;
+        height: 250px;
+        float: left;
+    }
+}
+
+@media (max-width:480px){
+    
+    .container {
+        top: 0;
+        left: 0;
+        transform: translate(0);
+     }
+    .container  .Box{
+        width: 100%;
+        height: 250px;
+        float: none;
+    }
+}
+
